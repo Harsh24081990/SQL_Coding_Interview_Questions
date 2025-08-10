@@ -1,9 +1,9 @@
 Input: ( I want total distance covered by each train between chennai to delhi) -------- 
 Source_city 	Dest_city 	Distance 	Train 
 Chennai 		   Nagpur 		   15000 		   A 
-Nagpur 			   Delhi 		    12000 		   A 
-Chennai 		   UP 			      17000 		   B 
-UP 				      Delhi 		    6000 		    B
+Nagpur 			   Delhi 		   12000 		   A 
+Chennai 		   UP 			    17000 		   B 
+UP 				     Delhi 		 6000 		    B
  
 output: ------- 
 Source_City  Dest_City  Train  Distance 
