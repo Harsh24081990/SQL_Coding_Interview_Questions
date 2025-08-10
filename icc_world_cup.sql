@@ -1,4 +1,5 @@
-1.--================================ICC WC===================================
+--================================ICC WC===================================
+--PROBLEM:
 create table icc_world_cup
 (
 Team_1 Varchar(20),
@@ -20,6 +21,16 @@ select * from icc_world_cup;
 --team_name, num_of_match_played, no_of_wins, no_of_losses
 
 --======================================================================================
+-- SOLUTION:
+select team_name, count(winner_flag) as played, sum(winner_flag) as won, 
+(count(winner_flag)-sum(winner_flag)) as loss
+from
+(select Team_1 as team_name, case when Team_1 = Winner then 1 else 0 end as winner_flag
+from icc_world_cup
+union all
+select Team_2 as team_name, case when Team_2 = Winner then 1 else 0 end as winner_flag
+from icc_world_cup) AA
+group by team_name;
 
 
 
